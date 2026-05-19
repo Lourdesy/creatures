@@ -10,8 +10,26 @@ function showHome()
         if creature lives in air, yellow
         
         */
-        document.querySelectorAll("div.creatures").forEach(el => {
-    el.style.backgroundColor = "yellow";
+        document.querySelectorAll("div.creature").forEach(el => {
+    //el.style.backgroundColor = "yellow";
+
+    let myHome = el.dataset.home;
+    //alert(myHome);
+    switch(myHome){
+        case "land":
+            el.style.backgroundColor = "green";
+            
+            break;
+
+        case "water":
+            el.style.backgroundColor = "blue";
+            break;
+
+        case "air":
+            el.style.backgroundColor = "yellow";
+            break;
+
+    }
 });
 
     
@@ -25,7 +43,20 @@ function showType()
         if creature is an animal, border color solid red
         if creature is an insect, border color is dashed orange
     */
-    alert("showType()");
+            document.querySelectorAll("div.creature").forEach(el => {
+    //el.style.backgroundColor = "yellow";
+
+    let myType = el.dataset.creatureType;
+    //alert(myHome);
+    switch(myType){
+        case "animal":
+            el.style.border = "3px solid red";
+            break;
+        case "insect":
+            el.style.border = "3px dashed orange";
+            break;
+    }
+});
 }//end showType()
 
 function clearAll()
@@ -38,4 +69,33 @@ function clearAll()
         
     */
     alert("clearAll()");
+}//end clearAll()
+            break;
+
+        case "water":
+            el.style.backgroundColor = "blue";
+            break;
+
+        case "air":
+            el.style.backgroundColor = "yellow";
+            break;
+
+    }
+});
+}//end showType()
+
+function clearAll()
+{
+    /*
+        loop through all creatures
+        
+        clear border back to 1px solid black
+        clear background color to white
+        
+    */
+    document.querySelectorAll("div.creature").forEach(function(el){
+        el.style.backgroundColor = "#FFF";
+        el.style.border = "1px solid #000";
+    
+    });
 }//end clearAll()
