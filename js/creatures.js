@@ -10,6 +10,7 @@ function showHome()
         if creature lives in air, yellow
         
         */
+      
         document.querySelectorAll("div.creature").forEach(el => {
     //el.style.backgroundColor = "yellow";
 
@@ -47,7 +48,7 @@ function showType()
     //el.style.backgroundColor = "yellow";
 
     let myType = el.dataset.creatureType;
-    //alert(myHome);
+  
     switch(myType){
         case "animal":
             el.style.border = "3px solid red";
@@ -59,30 +60,6 @@ function showType()
 });
 }//end showType()
 
-function clearAll()
-{
-    /*
-        loop through all creatures
-        
-        clear border back to 1px solid black
-        clear background color to white
-        
-    */
-    alert("clearAll()");
-}//end clearAll()
-            break;
-
-        case "water":
-            el.style.backgroundColor = "blue";
-            break;
-
-        case "air":
-            el.style.backgroundColor = "yellow";
-            break;
-
-    }
-});
-}//end showType()
 
 function clearAll()
 {
